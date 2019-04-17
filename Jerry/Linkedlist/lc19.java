@@ -7,6 +7,7 @@
  * }
  */
 class Solution {
+	// using stack
     public ListNode removeNthFromEnd(ListNode head, int n) {
         Stack<ListNode> stack = new Stack<>();
         
@@ -31,5 +32,30 @@ class Solution {
             pre.next = curr.next;
             return head;
         }
+    }
+
+    // using two pointers (one-pass)
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        ListNode front = head, end = head;
+        // set end as the n-th node
+        int i = 1;
+        while (i < n) {
+            end = end.next;
+            i++;
+        }
+        
+        // head is the node to be removed
+        if (end.next == null) {
+            return head.next;
+        }
+        
+        end = end.next;
+        while (end.next != null) {
+            front = front.next;
+            end = end.next;
+        }
+        
+        front.next = front.next.next;
+        return head;
     }
 }
