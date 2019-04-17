@@ -7,6 +7,7 @@
  * }
  */
 class Solution {
+    // iteratively
     public ListNode reverseList(ListNode head) {
         if (head == null) {
             return null;
@@ -23,5 +24,33 @@ class Solution {
         }
         
         return head;
+    }
+
+    // recursively
+    public ListNode reverseList(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+        
+        ListNode[] headNTail = helper(head);
+        return headNTail[0];
+    }
+    
+    private ListNode[] helper(ListNode head) {
+        ListNode[] headNTail = new ListNode[2];
+        
+        // head is the last one in list
+        if (head.next == null) {
+            headNTail[0] = head;
+            headNTail[1] = head;
+            return headNTail;
+        }
+
+        headNTail = helper(head.next);
+        head.next = null;
+        headNTail[1].next = head;
+        headNTail[1] = headNTail[1].next;
+        
+        return headNTail;
     }
 }
