@@ -64,7 +64,7 @@ class Solution {
 
     /**
      * Result
-     * Runtime: faster than 100%
+     * Runtime: faster than 100.00%
      * Memory: less than 5.18%
      */
 }
