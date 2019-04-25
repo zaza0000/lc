@@ -36,7 +36,6 @@ class Solution {
     }
 
     /**
-     * Result
      * Runtime: faster than 89.34%
      * Memory: less than 75.17%
      */
