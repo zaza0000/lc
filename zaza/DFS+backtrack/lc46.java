@@ -1,7 +1,6 @@
-package DPSandBacktrack;
+package DFSandBacktrack;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 // 1.how we can convert a collection to an ArrayList (or deepcopy). 2.contains, add, remove
