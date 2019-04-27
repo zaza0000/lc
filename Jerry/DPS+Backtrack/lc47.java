@@ -11,12 +11,12 @@ class Solution {
         for (int i : nums) {
             numList.add(i);
         }
-        result = dps(numList);
+        result = dfs(numList);
         
         return result;
     }
     
-    private List<List<Integer>> dps(List<Integer> numList) {
+    private List<List<Integer>> dfs(List<Integer> numList) {
         List<List<Integer>> result = new ArrayList();
         if (numList == null || numList.size() == 0) {
             return result;
