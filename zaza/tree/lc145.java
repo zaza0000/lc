@@ -93,5 +93,27 @@ public class lc145 {
 //        }
 //        return output;
 //    }
+    // not using addFirst()
+//    public void postOrderTraversalbyLoop(Node node){
+//        Stack<Node> stack = new Stack<>();
+//        Node p = node,prev = node;
+//        while(p!=null || !stack.isEmpty()){
+//            while(p!=null){
+//                stack.push(p);
+//                p = p.getLeft();
+//            }
+//            if(!stack.isEmpty()){
+//                Node temp = stack.peek().getRight();
+//                if(temp == null||temp == prev){
+//                    p = stack.pop();
+//                    checkCurrentNode(p);
+//                    prev = p;
+//                    p = null;
+//                }else{
+//                    p = temp;
+//                }
+//            }
+//        }
+//    }
 
 }
